@@ -1,0 +1,36 @@
+---
+title: "a3"
+author: "Sarah Warsame"
+date: "5/16/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("analysis.R")
+```
+
+##  Sarah's Incarceration Analysis
+My name is Sarah and I believe that there are more Black males incarcerated than White males in America due to systemic injustice. In this analysis I have chosen to compare the number of incarcerated Black males and number of incarcerated White males throughout time and the highest incarcerated population sizes throughout the country in counties. Because I want to show an accurate depiction of the racial makeup in regards to White and Black males of jails in America, and to see the racial disparities.   
+Through the data I have identified that maximum population of incarcerated Black males which is  `r format(max_b_male_jailed)` with the highest population in `r format(b_male_popc)`. While the maximum population of incarcerated White males is `r format(max_w_male_jailed)` with the highest population in `r format(w_male_popc)`. From that we see a disproportionate rate of Black males being jailed to White males. I also looked at the population of both races throughout time, in the year 2000 and in the year 2013. The population of incarcerated Black males in 2000 was `r format(b_male_pop_2000)`, and the incarcerated White male population in 2000 was `r format(w_male_pop_2000)`. Here we see again the great difference between incarcerated White males and incarcerated Black males even twenty two years ago. Now I've looked at a more recent date, 2013. Where the population of incarcerated Black males was `r format(b_male_pop_2013)`, and the population of incarcerated White males was `r format(w_male_pop_2013)`. 
+Throughout time we see a decrease of both populations being jailed but the same difference still in place with incarcerated Black males being far greater than incarcerated White males. The disproportion is highlighted even more when you put into context how White males are in the majority of the country's population while Black males are in the minority. With the war on drugs targeting black communities, greater policing in predominately Black areas, the criminalization of Black males, and the high cases of police brutality, it is of no surprise what these numbers show. It is even more clear now the presence of discrimination against Black males in the country. 
+
+
+Here is a chart showing the population of incarcerated Black males over time.
+```{r}
+b_line_max
+```
+
+
+
+Here is a chart comparing the population of Black and White males throughout time.
+```{r}
+one_graph
+```
+
+
+Here is a map showing the population of incarcerated Black males throughout the country by counties. It is clearly seen the NA values and the higher number of incarcerated Black males in clusters throughout the country.
+
+```{r}
+make_bw_map
+```
